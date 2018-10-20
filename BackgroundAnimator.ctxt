@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=BackgroundAnimator
+comment1.params=
+comment1.target=void\ buildFrames()
+comment2.params=digit
+comment2.target=java.lang.String\ twoDigit(int)
+comment3.params=
+comment3.target=int\ getFrameCount()
+comment4.params=index
+comment4.target=greenfoot.GreenfootImage\ getImage(int)
+numComments=5

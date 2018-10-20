@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=FileTalker
+comment1.params=
+comment1.target=void\ createSaveFile()
+comment2.params=title\ data
+comment2.target=void\ writeData(java.lang.String,\ int)
+comment3.params=title\ data
+comment3.target=void\ writeData(java.lang.String,\ java.lang.String)
+comment4.params=title
+comment4.target=int\ readIntegerData(java.lang.String)
+comment5.params=title
+comment5.target=java.lang.String\ readStringData(java.lang.String)
+numComments=6
