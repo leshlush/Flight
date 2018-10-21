@@ -15,7 +15,7 @@ public class Player extends Actor
     public void act() 
     {
        keyCommands();
-       endGame();
+       loseLife();
     }  
     
      public void keyCommands()
@@ -62,11 +62,32 @@ public class Player extends Actor
         getWorld().addObject(new Beam(), getX(), getY() );
     }
     
-    public void endGame()
+    public void loseLife()
     {
-        if(Game.getShield() <= 0)
+        if(Game.getShield() <=0)
+        {
+            Game.setShield(100);
+            Game.setLives( Game.getLives() - 1 );
+            newLife();
+        }
+    }
+    
+    public void resetLevel()
+    {
+        FlightLevel level = getWorldOfType(FlightLevel.class);
+        World reset = LevelByNumber.getLevelByNumber( level.getLevelNumber());
+        Greenfoot.setWorld(reset);
+    }
+    
+    public void newLife()
+    {
+        if(Game.getShield() <= 0 && Game.getLives() <= 0)
         {
             Greenfoot.setWorld(new End());
+        }
+        else
+        {
+            resetLevel();
         }
     }
 }

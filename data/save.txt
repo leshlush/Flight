@@ -1,9 +1,5 @@
 
 Score:0
-
-
-topscorer:Mr. Sanderson
-highscore:200
 Shield:100
 Lives:3
 Level:1

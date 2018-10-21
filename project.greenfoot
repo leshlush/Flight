@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Oct 21 13:07:47 CDT 2018
+#Sun Oct 21 13:18:40 CDT 2018
 target16.name=Star
 dependency35.to=Menu
 editor.swing.0.y=0
@@ -398,7 +398,7 @@ target20.y=250
 target20.x=150
 dependency34.type=UsesDependency
 dependency31.from=StartScreen
-editor.swing.0.height=700
+editor.swing.0.height=0
 target6.showInterface=false
 target15.showInterface=false
 dependency38.from=End
@@ -421,7 +421,7 @@ target20.width=80
 mainWindow.height=1114
 height=750
 class.End.superclass=greenfoot.World
-editor.swing.0.width=916
+editor.swing.0.width=0
 target5.showInterface=false
 target14.showInterface=false
 target26.height=50

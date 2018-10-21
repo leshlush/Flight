@@ -42,7 +42,16 @@ public class LevelOne extends FlightLevel
     
     public void placeAllEnemies()
     {
-       // placeEnemy(new Saucer(), 0, 2
+        placeEnemy(new Saucer(), 0, 200);
+        
+        placeEnemy(new Saucer(), 100, 220);
+        placeEnemy(new Saucer(), 120, 220);
+        placeEnemy(new Saucer(), 140, 220);
+        
+        placeEnemy(new RedEnemy(), 700, 150);
+        placeEnemy(new RedEnemy(), 700, 250);
+        placeEnemy(new RedEnemy(), 700, 350);
+        
     }
     
     

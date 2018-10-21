@@ -29,7 +29,7 @@ public class ScoreBoard extends Actor
    {
        world.addObject(lives, getX() - 45, getY() - 20);
        world.addObject(shield, getX()- 32, getY() );
-       world.addObject(score, getX() - 30 , getY() + 20);
+       world.addObject(score, getX() - 32 , getY() + 20);
    }
    
    public void act()
