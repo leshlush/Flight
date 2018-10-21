@@ -40,6 +40,11 @@ public class Player extends Actor
         {
             shootButton = false;
         }
+        
+        if(Greenfoot.isKeyDown("escape"))
+        {
+            Greenfoot.setWorld(new Pause(getWorld()));
+        }
     }
     
     public void moveUp()

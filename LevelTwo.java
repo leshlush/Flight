@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */ 
-public class LevelTwo extends World
+public class LevelTwo extends FlightLevel
 {
     private Player player;
     private Saucer saucer; 
@@ -20,11 +20,11 @@ public class LevelTwo extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 480, 1, false); 
+        levelNumber = 2;
         setPaintOrder(Actor.class, ScoreBoard.class, RiverForeground.class, RiverBackground.class);
         
         scoreBoard = new ScoreBoard();
-        //addObject( scoreBoard, 100, 50);
-        
+        addObject( scoreBoard, 100, 50);        
         
         player = new Player();
         addObject(player, 100, 240);
@@ -37,6 +37,12 @@ public class LevelTwo extends World
     
     public void act()
     {
+        super.act();
         RiverAnimator.animateRivers();
+    }
+    
+    public int getLevelNumber()
+    {
+        return levelNumber;
     }
 }

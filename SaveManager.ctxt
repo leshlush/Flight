@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=SaveManager
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SaveManager\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=int\ readScore()
+comment2.params=
+comment2.target=int\ readShield()
+comment3.params=
+comment3.target=int\ readLives()
+comment4.params=
+comment4.target=int\ readLevel()
+comment5.params=score
+comment5.target=void\ writeScore(int)
+comment6.params=shield
+comment6.target=void\ writeShield(int)
+comment7.params=lives
+comment7.target=void\ writeLives(int)
+comment8.params=level
+comment8.target=void\ writeLevel(int)
+numComments=9

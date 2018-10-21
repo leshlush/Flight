@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class LevelOne extends World
+public class LevelOne extends FlightLevel
 {
     private Player player;
     private Balloon test;
@@ -14,10 +14,12 @@ public class LevelOne extends World
     private int currentFrame = 0;
     private ScoreBoard scoreBoard;
     
+    
     public LevelOne()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 480, 1); 
+        levelNumber = 1;
         setPaintOrder(Actor.class, ScoreBoard.class, Star.class);  
         
         player = new Player();
@@ -38,9 +40,14 @@ public class LevelOne extends World
        
     public void act()
     {
-       StarAnimator.moveStars(this);
+        super.act();
+        StarAnimator.moveStars(this);
     }
     
+    public int getLevelNumber()
+    {
+        return levelNumber;
+    }
     
     
 }

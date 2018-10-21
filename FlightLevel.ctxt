@@ -1,7 +1,18 @@
 #BlueJ class context
 comment0.target=FlightLevel
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ FlightLevel\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=FlightLevel()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FlightLevel.\r\n\ \r\n
-numComments=2
+comment1.params=width\ height\ cellSize\ bounded
+comment1.target=FlightLevel(int,\ int,\ int,\ boolean)
+comment2.params=width\ height\ cellSize
+comment2.target=FlightLevel(int,\ int,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=int\ getLevelNumber()
+comment5.params=e\ frame\ yCoordinate
+comment5.target=void\ placeEnemy(Enemy,\ int,\ int)
+comment6.params=
+comment6.target=void\ addEnemies()
+comment7.params=
+comment7.target=void\ endLevel()
+numComments=8
