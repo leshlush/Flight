@@ -9,9 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LevelOne extends FlightLevel
 {
     private Player player;
-    private Balloon test;
-    private EyeCopter test2;
-    private int currentFrame = 0;
     private ScoreBoard scoreBoard;
     
     
@@ -28,15 +25,9 @@ public class LevelOne extends FlightLevel
         scoreBoard = new ScoreBoard();
         addObject( scoreBoard, 100, 50);
         
-        test = new Balloon();
-        addObject(test, 650, 140);
-        
-        test2 = new EyeCopter();
-        addObject(test2, 650, 340);
-        
+               
         StarAnimator.addStars(this);
-    }
-    
+    }    
        
     public void act()
     {
@@ -47,6 +38,11 @@ public class LevelOne extends FlightLevel
     public int getLevelNumber()
     {
         return levelNumber;
+    }
+    
+    public void placeAllEnemies()
+    {
+       // placeEnemy(new Saucer(), 0, 2
     }
     
     

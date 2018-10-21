@@ -42,7 +42,7 @@ public class FileTalker
             for (int i = 0; i < fileContent.size(); i++) {
                 String line = fileContent.get(i);
                     if (line.startsWith(title)) {
-                        fileContent.set(i, title + data);
+                        fileContent.set(i, title + ":" + data);
                         dataExists = true;
                         break;
                     }
@@ -71,7 +71,7 @@ public class FileTalker
             for (int i = 0; i < fileContent.size(); i++) {
                 String line = fileContent.get(i);
                     if (line.startsWith(dataTitle)) {
-                        fileContent.set(i, dataTitle + data);
+                        fileContent.set(i, dataTitle + ":" + data);
                         dataExists = true;
                         break;
                     }

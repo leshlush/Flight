@@ -10,17 +10,20 @@ public abstract class FlightLevel extends World
 {
     protected int levelNumber;
     protected int frameLength;
+    protected int currentFrame;
     protected ArrayList<Triple<Enemy, Integer, Integer> > enemyFrames;
     
     public FlightLevel(int width, int height, int cellSize, boolean bounded)
     {
         super(width, height, cellSize, bounded);
         enemyFrames = new ArrayList();
-        frameLength = 2000;
+        frameLength = 200;
+        currentFrame = 0;
+        placeAllEnemies();
     }
     
      public FlightLevel(int width, int height, int cellSize)
-    {
+    { 
         this(width, height, cellSize, false);
     }
     
@@ -28,10 +31,11 @@ public abstract class FlightLevel extends World
     {
         addEnemies();
         endLevel();
-        frameLength--;
+        currentFrame++;
     }
     
     public abstract int getLevelNumber();
+    public abstract void placeAllEnemies();
     
     public void placeEnemy(Enemy e, int frame, int yCoordinate)
     {
@@ -43,7 +47,7 @@ public abstract class FlightLevel extends World
     {
         for(Triple<Enemy, Integer, Integer> p : enemyFrames)
         {
-            if(p.item2 == frameLength)
+            if(p.item2 == currentFrame)
             {
                addObject(p.item1, getWidth(), p.item3); 
             }
@@ -52,7 +56,7 @@ public abstract class FlightLevel extends World
     
     public void endLevel()
     {
-        if(frameLength <= 0)
+        if(currentFrame >= frameLength)
         {
             Greenfoot.setWorld( LevelByNumber.getNextLevel(this) );
         }

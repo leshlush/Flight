@@ -45,4 +45,9 @@ public class LevelTwo extends FlightLevel
     {
         return levelNumber;
     }
+    
+    public void placeAllEnemies()
+    {
+        
+    }
 }

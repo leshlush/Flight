@@ -31,7 +31,7 @@ public class Player extends Actor
         }
         
         if(Greenfoot.isKeyDown("space") && !shootButton)
-        {
+        { 
             shoot();
             shootButton = true;
         }
@@ -43,7 +43,7 @@ public class Player extends Actor
         
         if(Greenfoot.isKeyDown("escape"))
         {
-            Greenfoot.setWorld(new Pause(getWorld()));
+            Greenfoot.setWorld(new Pause(  (FlightLevel) getWorld() ));
         }
     }
     

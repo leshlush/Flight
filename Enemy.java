@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public abstract class Enemy extends Actor
 {
-    private double exactX;
+    private double exactX; 
     private double exactY;      
     protected int damage; 
     protected int scoreValue;

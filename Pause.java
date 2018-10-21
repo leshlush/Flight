@@ -10,13 +10,13 @@ public class Pause extends World
 {
     private Label logo;
     private Menu menu;    
-    private World currentWorld;
+    private FlightLevel currentWorld;
     
     /**
      * Constructor for objects of class Pause.
      * 
      */
-    public Pause(World currentWorld)
+    public Pause(FlightLevel currentWorld)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 480, 1); 
@@ -26,7 +26,7 @@ public class Pause extends World
         logo = new Label("PAUSE", 75);
         logo.setFillColor(Color.gray);
         addObject(logo, 350, 100);
-        
+         
         menu = new Menu();
         menu.addOption(new Return());
         menu.addOption(new Save());
@@ -42,7 +42,13 @@ public class Pause extends World
         
         public void performAction()
         {
+            SaveManager.writeScore(Game.getScore());
+            SaveManager.writeShield(Game.getShield());
+            SaveManager.writeLives(Game.getLives());
+            SaveManager.writeLevel(currentWorld.getLevelNumber());
             
+            Label saved = new Label("Game Saved!", 40);
+            addObject(saved, 350, 300);
         }
     }
     

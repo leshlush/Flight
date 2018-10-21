@@ -61,7 +61,16 @@ public class StartScreen extends World
         
         public void performAction()
         {
-            Greenfoot.stop();
+            if(SaveManager.readLives() > 0)
+            {
+                Game.setScore( SaveManager.readScore()  );
+                Game.setShield( SaveManager.readShield() );
+                Game.setLives( SaveManager.readLives() );
+                
+                int levelNumber = SaveManager.readLevel();
+                World level = LevelByNumber.getLevelByNumber(levelNumber);
+                Greenfoot.setWorld(level);
+            }
         }
     }
 }

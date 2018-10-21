@@ -29,7 +29,13 @@ public class LevelByNumber
     
     public static FlightLevel getLevelByNumber(Integer number)
     {
-        return levels.get(number);
+        FlightLevel level = levels.get(number);
+        try{ 
+            Class<? extends FlightLevel> cls = level.getClass();
+            level = cls.newInstance();
+        }
+        catch(Exception ex){ }
+        return level;
     }
     
     public static World getNextLevel(FlightLevel level)
