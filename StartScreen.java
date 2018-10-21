@@ -22,14 +22,14 @@ public class StartScreen extends World
         
         logo = new Label("FLIGHT", 75);
         logo.setFillColor(Color.gray);
-        addObject(logo, 350, 100);
+        addObject(logo, 350, 100); 
         
         menu = new Menu();
         menu.addOption(new Start());
         menu.addOption(new Continue());
         addObject(menu, 350, 220);
         
-        StarAnimator.addStars(this);
+       StarAnimator.addStars(this);
     }
     
     

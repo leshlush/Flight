@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LevelTwo extends FlightLevel
 {
     private Player player;
-    private Saucer saucer; 
     private ScoreBoard scoreBoard;
     
     /**
@@ -28,17 +27,13 @@ public class LevelTwo extends FlightLevel
         
         player = new Player();
         addObject(player, 100, 240);
-        
-        saucer = new Saucer();
-        addObject(saucer, 670, 240);
-        
+                  
         RiverAnimator.addRivers(this);
     }
     
     public void act()
     {
         super.act();
-        RiverAnimator.animateRivers();
     }
     
     public int getLevelNumber()
