@@ -27,41 +27,8 @@ public class Pause extends World
         logo.setFillColor(Color.gray);
         addObject(logo, 350, 100);
          
-        menu = new Menu();
-        menu.addOption(new Return());
-        menu.addOption(new Save());
-        addObject(menu, 350, 220);
+       
     }
     
-    private class Save extends MenuOption
-    {
-        public Save()
-        {
-            super("SAVE");
-        }
-        
-        public void performAction()
-        {
-            SaveManager.writeScore(Game.getScore());
-            SaveManager.writeShield(Game.getShield());
-            SaveManager.writeLives(Game.getLives());
-            SaveManager.writeLevel(currentWorld.getLevelNumber());
-            
-            Label saved = new Label("Game Saved!", 40);
-            addObject(saved, 350, 300);
-        }
-    }
-    
-    private class Return extends MenuOption
-    {
-        public Return()
-        {
-            super("RETURN");
-        }
-        
-        public void performAction()
-        {
-            Greenfoot.setWorld(currentWorld);
-        }
-    }
+   
 }

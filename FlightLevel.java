@@ -17,7 +17,7 @@ public abstract class FlightLevel extends World
     {
         super(width, height, cellSize, bounded);
         enemyFrames = new ArrayList();
-        frameLength = 1000;
+        frameLength = 1500;
         currentFrame = 0;
         placeAllEnemies();
     }

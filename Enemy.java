@@ -24,6 +24,7 @@ public abstract class Enemy extends Actor
     
     public abstract void move();
         
+    
     public void hitPlayer()
     {
         Player p = (Player) getOneIntersectingObject(Player.class);

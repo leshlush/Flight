@@ -16,10 +16,7 @@ public class End extends World
         logo.setFillColor(Color.red);
         addObject(logo, 350, 100);
         
-        scorer = new Label(HighScoreManager.readTopScorer() + " - " + HighScoreManager.readHighScore(), 40);
-        scorer.setFillColor(Color.red);
-        addObject(scorer, 350, 150);
-        
+                
         menu = new Menu();
         menu.addOption(new Retry());
         menu.addOption(new Quit());
@@ -30,22 +27,10 @@ public class End extends World
     
     public void act()
     {
-        checkScore();
         StarAnimator.moveStars(this);
     }
     
-    public void checkScore()
-    {
-        int currentScore = Game.getScore();
-        if(HighScoreManager.isNewHighScore(currentScore))
-        {
-           String name = Greenfoot.ask("Name");
-           HighScoreManager.setNewHighScore(name, currentScore);
-           scorer.setValue(name + ": " + currentScore);
-           Game.setScore(0);
-        }        
-    }
-    
+       
     public class Retry extends MenuOption
     {
         public Retry()

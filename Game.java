@@ -9,7 +9,7 @@ public class Game
    private static int score;
    private static int lives;
    private static int shield;
-   private static int highScore;
+   
    
    static{
        resetDefaults();
@@ -20,7 +20,6 @@ public class Game
        score = 0;
        lives = 3;
        shield = 100;
-       highScore = 0;
    }
     
    public static int getScore()
